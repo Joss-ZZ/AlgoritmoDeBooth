@@ -11,6 +11,58 @@
 </head>
 
 <body>
+
+    <aside class="aside" id="aside">
+        <div class="cerrar-ventana">
+            <div class="cerrar" id="cerrar">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div id="mensaje-error" class="mensaje-error">
+            <div class="mensaje-error__texto">
+                <p>!Oh, no! Se ha producido un error en el cálculo</p>
+            </div>
+        </div>
+        <div class="contenedor-form">
+            <form action="#">
+                <div class="form-valor">
+                    <input type="text" id="valor1" placeholder="Ingrese el multiplicando...">
+                </div>
+                <div class="form-valor">
+                    <input type="text" id="valor2" placeholder="Ingrese el multiplicador...">
+                </div>
+                <div class="form-enviar">
+                    <input type="submit" id="Calcular" value="Calcular...">
+                </div>
+            </form>
+        </div>
+        <div class="contenido-reglas">
+            <div class="reglas-casos">
+                <div class="casos">
+                    <div>0</div>
+                    <div>0</div>
+                </div>
+                <div class="casos">
+                    <div>1</div>
+                    <div>1</div>
+                </div>
+                <div class="casos">
+                    <div>0</div>
+                    <div>1</div>
+                </div>
+                <div class="casos">
+                    <div>1</div>
+                    <div>0</div>
+                </div>
+            </div>
+            <div class="reglas-operaciones">
+                <div class="regla">Corrimiento</div>
+                <div class="regla">Corrimiento</div>
+                <div class="regla">P + A ; ==></div>
+                <div class="regla">P + S ; ==></div>
+            </div>
+        </div>
+    </aside>
     <div class="contenedor">
         <header class="header">
             <div class="menu-principal" id="menu-principal">
@@ -18,57 +70,7 @@
             </div>
             <h1>Algoritmo de <span>Booth</span></h1>
         </header>
-        <aside class="aside" id="aside">
-            <div class="cerrar-ventana">
-                <div class="cerrar" id="cerrar">
-                    <i class="fas fa-times"></i>
-                </div>
-            </div>
-            <div id="mensaje-error" class="mensaje-error">
-                <div class="mensaje-error__texto">
-                    <p>!Oh, no! Se ha producido un error en el cálculo</p>
-                </div>
-            </div>
-            <div class="contenedor-form">
-                <form action="#">
-                    <div class="form-valor">
-                        <input type="text" id="valor1" placeholder="Ingrese el multiplicando...">
-                    </div>
-                    <div class="form-valor">
-                        <input type="text" id="valor2" placeholder="Ingrese el multiplicador...">
-                    </div>
-                    <div class="form-enviar">
-                        <input type="submit" id="Calcular" value="Calcular...">
-                    </div>
-                </form>
-            </div>
-            <div class="contenido-reglas">
-                <div class="reglas-casos">
-                    <div class="casos">
-                        <div>0</div>
-                        <div>0</div>
-                    </div>
-                    <div class="casos">
-                        <div>1</div>
-                        <div>1</div>
-                    </div>
-                    <div class="casos">
-                        <div>0</div>
-                        <div>1</div>
-                    </div>
-                    <div class="casos">
-                        <div>1</div>
-                        <div>0</div>
-                    </div>
-                </div>
-                <div class="reglas-operaciones">
-                    <div class="regla">Corrimiento</div>
-                    <div class="regla">Corrimiento</div>
-                    <div class="regla">P + A ; ==></div>
-                    <div class="regla">P + S ; ==></div>
-                </div>
-            </div>
-        </aside>
+
         <main class="contenido">
             <div class="contenido-variables">
                 <div class="container">
