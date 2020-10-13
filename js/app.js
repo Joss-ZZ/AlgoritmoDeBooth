@@ -426,11 +426,11 @@ calcular.addEventListener('click', (e) => {
         if (isNaN(Number(valor1.value)) || isNaN(Number(valor2.value))) {
             document.getElementById('mensaje-error').style.display = 'block';
         } else {
-            config.style.transform = `translateX(-100%)`;
             document.getElementById('mensaje-error').style.display = 'none';
             producto = parseInt(valor1.value) * parseInt(valor2.value);
             //Ejecutamos la lineas de código solo si el producto no superar los 7 bits en binario o el 127 en decimal
             if (producto <= 127) {
+                config.style.transform = `translateX(-100%)`;
                 let itemResultados = document.getElementById('resultados');
                 while (itemResultados.firstChild) {
                     itemResultados.removeChild(itemResultados.firstChild);
@@ -502,7 +502,7 @@ calcular.addEventListener('click', (e) => {
                 }, 2000);
             } else {
                 //Mandamos un mensaje de error
-                console.log("El producto supera los 7 bits")
+                document.getElementById('mensaje-error').style = 'display:block';
             }
 
         }

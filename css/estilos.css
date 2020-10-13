@@ -22,7 +22,7 @@ body {
 .contenedor {
     background: #fff;
     width: 100%;
-    max-width: 130rem;
+    max-width: 150rem;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -207,6 +207,7 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    min-height: 80vh;
 }
 
 .contenido-variables {
