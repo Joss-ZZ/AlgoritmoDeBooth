@@ -17,6 +17,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 1.6rem;
     line-height: 2;
+    overflow-x: hidden;
 }
 
 .contenedor {
@@ -199,6 +200,7 @@ body {
     font-weight: 700;
     line-height: 1.5rem;
     padding: 0 .3rem;
+    min-width: 10rem;
 }
 
 .contenido {
@@ -251,12 +253,15 @@ body {
 }
 
 .contenido-resultados {
-    flex: 1;
+    /* flex: 1; */
     margin: 2rem auto;
     display: flex;
     justify-content: center;
     position: relative;
     min-height: 40rem;
+    min-width: 100vw;
+    overflow-x: auto;
+    padding: 1.5rem;
 }
 
 .contenido-spinner {
@@ -264,6 +269,7 @@ body {
     display: flex;
     justify-content: center;
     display: none;
+    height: 0;
 }
 
 .contenido-resultados ul {
@@ -398,7 +404,7 @@ body {
     left: 2.5%;
     font-weight: 700;
     color: #1A5276;
-    border-radius: 50%;
+    margin-left: 1rem;
 }
 
 .elementoVarA::before {
@@ -407,7 +413,7 @@ body {
     left: 2.5%;
     font-weight: 700;
     color: #1A5276;
-    border-radius: 50%;
+    margin-left: 1rem;
 }
 
 .elementoVarS::before {
@@ -416,7 +422,7 @@ body {
     left: 2.5%;
     font-weight: 700;
     color: #1A5276;
-    border-radius: 50%;
+    margin-left: 1rem;
 }
 
 
@@ -677,4 +683,10 @@ body {
     100% {
         transform: translateY(0%);
     }
+}
+
+/* Estilo para mostrar el resultado final */
+.resultado-border{
+    box-shadow: rgb(44 68 84) 0px 26px 0px 0px inset;
+    transition: all 1.5s ease 0s;
 }

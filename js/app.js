@@ -412,6 +412,12 @@ async function algoritmoDeBooth(A, S, P, productoBinario) {
             corrimientos = [];
         }
     }
+    const inicio = productoBinario.length;
+    const ultimaFilaResult = document.getElementById('resultados').lastChild;
+    const arrayChildrens = ultimaFilaResult.getElementsByClassName('resultado');
+    for(let i = inicio; i < arrayChildrens.length-1; i++){
+        arrayChildrens[i].classList.add('resultado-border');
+    }
     A = [];
     S = [];
     P = [];
