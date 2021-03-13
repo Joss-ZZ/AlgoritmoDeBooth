@@ -364,7 +364,7 @@ function animationReglaOP(op) {
 
 async function algoritmoDeBooth(A, S, P, productoBinario) {
     await animationPrincipal(A, S, P);
-    //El siguiente bloque de código hace el Algorito de booth
+    //El siguiente bloque de código hace el Algoritmo de booth
     let resultado = [];
     let corrimientos = [];
     for (let i = 0; i < productoBinario.length; i++) {
@@ -419,12 +419,13 @@ async function algoritmoDeBooth(A, S, P, productoBinario) {
     binario2 = [];
 }
 
-//Evento de cacular producto
+//Evento boton calcular producto
 calcular.addEventListener('click', (e) => {
     e.preventDefault();
     if (valor1.value.length != 0 && valor2.value.length != 0) {
         if (isNaN(Number(valor1.value)) || isNaN(Number(valor2.value))) {
-            document.getElementById('mensaje-error').style.display = 'block';
+            //Mostramos mensaje de error cuando los campos no son números
+            msgError('Debe ingresar valores numéricos');
         } else {
             document.getElementById('mensaje-error').style.display = 'none';
             producto = parseInt(valor1.value) * parseInt(valor2.value);
@@ -501,12 +502,35 @@ calcular.addEventListener('click', (e) => {
                     algoritmoDeBooth(A, S, P, productoBinario);
                 }, 2000);
             } else {
-                //Mandamos un mensaje de error
-                document.getElementById('mensaje-error').style = 'display:block';
+                //Mandamos un mensaje de error cuando el producto supere el valor 127
+                msgError('Por favor, asegúrese de que el producto sea menor o igual a 127');
             }
 
         }
     } else {
-        document.getElementById('mensaje-error').style.display = 'block';
+        //Mostramos un error cuando por lo menos uno de los inputs esté vacío
+        msgError('Los campos no deben estar vacíos.');
     }
 })
+
+// Mostrar mensaje de error
+const msgError = (mensaje) => {
+
+    const divMsgError = document.querySelector('.mensaje-error__texto');
+    if(divMsgError.children.length>0){
+        borrarMsgError(divMsgError);
+    }
+    const elementP = document.createElement('p');
+    elementP.textContent = mensaje;
+    divMsgError.appendChild(elementP);
+    document.getElementById('mensaje-error').style.display = 'block';
+
+}
+
+// Borrar mensaje de error
+const borrarMsgError = (divMsgError) => {
+
+    const elementoHijo = document.querySelector('.mensaje-error__texto p');
+    divMsgError.removeChild(elementoHijo);
+
+}

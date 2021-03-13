@@ -78,11 +78,11 @@ body {
 
 .cerrar {
     color: red;
-    transition: all .5s;
+    /* transition: all .5s; */
 }
 
 .cerrar:hover {
-    transform: rotateX(180deg);
+    /* transform: rotateX(180deg); */
     cursor: pointer;
 }
 
